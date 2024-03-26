@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 
-const props = defineProps(['displayText']);
+const props = defineProps({
+  displayText: {
+    type: String,
+    required: true,
+  }
+});
 
 const typeValue = ref("");
 const typeStatus = ref(false);
