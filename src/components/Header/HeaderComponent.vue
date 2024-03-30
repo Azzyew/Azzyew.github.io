@@ -27,7 +27,7 @@ const navItems = [
 </script>
 
 <template>
-  <header class="w-5/6 h-9 mt-4">
+  <header class="w-full h-9 mt-4">
     <nav class="flex items-center justify-evenly">
       <a class="mplus text-3xl text-orange-600" href="#">Laisa Costa</a>
 

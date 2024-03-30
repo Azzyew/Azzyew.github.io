@@ -16,7 +16,7 @@ const newTextDelay = ref(2000);
 const charIndex = ref(0);
 const fontIndex = ref(0);
 
-const fontClasses = ['poppins', 'mPlus', 'playfairDisplay', 'cantataOne'];
+const fontClasses = ['font-poppins', 'font-mplus', 'font-playfairD', 'font-cantataOne'];
 
 const handleFont = computed(() => fontClasses[fontIndex.value % fontClasses.length]);
 

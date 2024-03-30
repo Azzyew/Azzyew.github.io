@@ -16,7 +16,7 @@ const props = defineProps({
   <li>
     <a
       class="
-        relative
+        relative scroll-smooth
         after:bg-orange-600 after:absolute after:h-px after:w-full after:-bottom-1 after:left-0 after:scale-x-0 after:transition-transform after:duration-500
         hover:after:scale-x-100
       "

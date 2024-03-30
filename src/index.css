@@ -5,21 +5,5 @@
 @tailwind utilities;
 
 body {
-  font-family: "Poppins", sans-serif;
-}
-
-.poppins {
-  font-family: "Poppins", sans-serif;
-}
-
-.mPlus {
-  font-family: "M PLUS Code Latin", monospace;
-}
-
-.playfairDisplay {
-  font-family: "Playfair Display", serif;
-}
-
-.cantataOne {
-  font-family: "Cantata One", serif;
+  @apply font-poppins;
 }
