@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import HeaderComponent from './components/Header/HeaderComponent.vue';
 import TypewriterAnimation from './components/TypewriterAnimation.vue';
+import SectionComponent from './components/SectionComponent.vue';
 
 const isOnScreen = ref(false);
 
@@ -16,9 +17,11 @@ onMounted(() => {
     });
   });
 
-  const target = document.getElementById('#about-me') as HTMLElement;
+  const targets = document.getElementsByTagName('h2');
 
-  observer.observe(target);
+  for (const target of targets) {
+    observer.observe(target);
+  }
 });
 
 </script>
@@ -29,23 +32,26 @@ onMounted(() => {
       <HeaderComponent />
     </div>
 
-    <div class="flex flex-col -mt-16 h-[calc(100dvh_-_2.25rem)] items-center text-center justify-center">
+    <div class="flex flex-col -mt-13 h-dvh items-center text-center justify-center">
       <h1 class="text-4xl font-light tracking-wider mb-4">prazer, sou a Laisa!</h1>
       <TypewriterAnimation display-text="desenvolvedora front-end" />
     </div>
 
-    <div class="p-16 flex flex-col items-center">
-      <h2
-        class="
-          text-2xl text-orange-600 font-light tracking-wider relative w-fit
-          after:bg-orange-600 after:absolute after:h-px after:w-full after:-bottom-1 after:left-0 after:scale-x-0 after:transition-transform after:duration-500  
-        "
-        :class="{ 'animate-fadeIn after:scale-x-100': isOnScreen }"
-        id="#about-me"
-      >quem sou eu</h2>
-      <p class="mt-12">me chamo Laisa, tenho mais de 2.5 anos de experiência e sou apaixonada por desenvolvimento web, principalmente front-end! já trabalhei com diferentes frameworks para aplicações em produção, e tenho sempre muita vontade de aprender e facilidade para isso. levo sempre em consideração acessibilidade, performance e developer experience nos projetos em que participo, e claro user experience acima de tudo.</p>
-    </div>
+    <SectionComponent title="quem sou eu" id-name="#about-me" :is-on-screen="isOnScreen">
+      me chamo Laisa, tenho mais de 2.5 anos de experiência e sou apaixonada por desenvolvimento web, principalmente front-end! já trabalhei com diferentes frameworks para aplicações em produção, e tenho sempre muita vontade de aprender e facilidade para isso. levo sempre em consideração acessibilidade, performance e developer experience nos projetos em que participo, e claro user experience acima de tudo.
+    </SectionComponent>
 
+    <SectionComponent title="experiência" id-name="#experience" :is-on-screen="isOnScreen">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+
+    <SectionComponent title="educação" id-name="#education" :is-on-screen="isOnScreen">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+
+    <SectionComponent title="tecnologias" id-name="#technologies" :is-on-screen="isOnScreen">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+
+    <SectionComponent title="contato" id-name="#contact-me" :is-on-screen="isOnScreen">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
 
   </main>
 </template>
