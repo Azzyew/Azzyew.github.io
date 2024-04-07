@@ -13,9 +13,10 @@ const props = defineProps({
     required: true,
   },
 });
+
 </script>
 <template>
-  <section class="p-16 flex flex-col items-center">
+  <section class="mt-12 p-16 flex flex-col items-center h-dvh">
     <h2
       class="
         text-2xl text-orange-600 font-light tracking-wider relative w-fit

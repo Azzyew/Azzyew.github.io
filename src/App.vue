@@ -8,16 +8,19 @@ const isOnScreen = ref(false);
 
 onMounted(() => {
   const observer = new IntersectionObserver(entries => {
+    const intersectingCount = entries.filter(entry => entry.isIntersecting).length;
+
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         isOnScreen.value = true;
-      } else {
-        isOnScreen.value = false;
-      }
-    });
-  });
+      };
 
-  const targets = document.getElementsByTagName('h2');
+    if (intersectingCount === 0) isOnScreen.value = false;
+      
+    });
+  }, { threshold: 1, rootMargin: "-5px" } );
+
+  const targets = document.querySelectorAll('h2');
 
   for (const target of targets) {
     observer.observe(target);
