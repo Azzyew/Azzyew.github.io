@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue';
 import HeaderComponent from './components/Header/HeaderComponent.vue';
 import TypewriterAnimation from './components/TypewriterAnimation.vue';
 import SectionComponent from './components/SectionComponent.vue';
+import ExperienceCard from './components/ExperienceCard.vue';
 
 const isOnScreen = ref(false);
 
@@ -18,7 +19,7 @@ onMounted(() => {
     if (intersectingCount === 0) isOnScreen.value = false;
       
     });
-  }, { threshold: 1, rootMargin: "-5px" } );
+  });
 
   const targets = document.querySelectorAll('h2');
 
@@ -45,16 +46,46 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="experiência" id-name="#experience" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+      <ExperienceCard company="BRIUS" job-title="Desenvolvedora Front-end" period="03/23 - 06/23">
+        Fui responsável pela migração da plataforma de Vue 2 para Vue 3. Participei do
+        desenvolvimento e manutenção de plataformas em produção, utilizando como stack principal
+        Vue.js e Typescript, além de tecnologias como Vuex, Pinia e TailwindCSS.
+      </ExperienceCard>
+      <ExperienceCard company="RankMyAPP" job-title="Desenvolvedora Fullstack" period="02/22 - 01/23">
+        Participei do desenvolvimento e manutenção de plataformas em produção, utilizando como
+        stack principal React e Typescript, além de tecnologias como Redux, Styled-components e
+        AntDesign no frontend. No backend utilizei tecnologias como Node.js, Typescript, NestJS,
+        RabbitMQ e bancos relacionais e não relacionais.
+      </ExperienceCard>
+      <ExperienceCard company="IFRS Campus Osório/CNPq" job-title="Bolsista fullstack" period="03/21 - 08/21">
+        Bolsista CNPq no projeto Promovid@, que teve como objetivo desenvolver um sistema de
+        monitoramento de casos de Covid-19 para as Secretarias Municipais de Saúde. Sistema feito
+        utilizando a stack MERN (MongoDB, Express, React e Node.js). Participei em atualizações e
+        melhorias nas páginas e no desenvolvimento de novas funções, como a de exportar os dados
+        em .CSV, e atualização nos filtros utilizados na pesquisa.
+      </ExperienceCard>
+      <ExperienceCard company="IFRS Campus Osório" job-title="Bolsista fullstack" period="08/20 - 12/20">
+        Bolsista de extensão na área de programação no projeto Incubadora de Redes e
+        Empreendimentos Solidários do Campus Osório. Programação com React.js, Node.js, Express,
+        ContextAPI e uso de metodologia ágil. Participei no desenvolvimento do aplicativo CoopFrete
+        para compartilhar fretes entre cooperativas, tanto no desenvolvimento de páginas, 
+        como na integração do sistema de redefinição de senha. Participei no desenvolvimento da página 
+        oficial do projeto Incubadora tanto na criação de telas quanto na criação dos CRUDs para 
+        administrar os conteúdos do site.
+      </ExperienceCard>
+    </SectionComponent>
 
     <SectionComponent title="educação" id-name="#education" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </SectionComponent>
 
     <SectionComponent title="tecnologias" id-name="#technologies" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </SectionComponent>
 
     <SectionComponent title="contato" id-name="#contact-me" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    </SectionComponent>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </SectionComponent>
 
   </main>
 </template>

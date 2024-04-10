@@ -16,7 +16,7 @@ const props = defineProps({
 
 </script>
 <template>
-  <section class="mt-12 p-16 flex flex-col items-center h-dvh">
+  <section class="mt-12 p-16 flex flex-col items-center min-h-dvh w-full">
     <h2
       class="
         text-2xl text-orange-600 font-light tracking-wider relative w-fit
@@ -25,8 +25,8 @@ const props = defineProps({
       :class="{ 'animate-fadeIn after:scale-x-100': props.isOnScreen }"
       :id="$props.idName"
     >{{ props.title }}</h2>
-    <p class="mt-12">
+    <div class="mt-12 flex flex-col space-y-4">
       <slot></slot>
-    </p>
+    </div>
   </section>
 </template>
