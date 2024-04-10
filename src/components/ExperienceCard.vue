@@ -17,10 +17,13 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="border border-orange-700 rounded-md px-12 py-8 w-[50%] odd:self-start even:self-end">
-    <h3 class="font-semibold text-lg">{{ props.company }}</h3>
-    <span class="font-extralight tracking-wide text-orange-600">{{ props.jobTitle }}</span>
-    <p class="font-extralight mb-4">{{ props.period }}</p>
-    <slot></slot>
+  <div class="w-[49%] odd:self-start even:self-end">
+    <div class="border border-orange-700 rounded-md px-12 py-8">
+      <h3 class="font-semibold text-lg">{{ props.company }}</h3>
+      <span class="font-extralight tracking-wide text-orange-600">{{ props.jobTitle }}</span>
+      <p class="font-extralight mb-4">{{ props.period }}</p>
+      <slot name="description"></slot>
+    </div>
+    <slot name="stack"></slot>
   </div>
 </template>
