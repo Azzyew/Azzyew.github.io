@@ -25,7 +25,7 @@ const props = defineProps({
       :class="{ 'animate-fadeIn after:scale-x-100': props.isOnScreen }"
       :id="$props.idName"
     >{{ props.title }}</h2>
-    <div class="mt-12 flex flex-col space-y-4">
+    <div class="mt-14 flex flex-col space-y-4">
       <slot></slot>
     </div>
   </section>
