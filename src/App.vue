@@ -4,7 +4,7 @@ import HeaderComponent from './components/Header/HeaderComponent.vue';
 import TypewriterAnimation from './components/TypewriterAnimation.vue';
 import SectionComponent from './components/SectionComponent.vue';
 import ExperienceCard from './components/ExperienceCard.vue';
-import colors from 'tailwindcss/colors';
+import TechnologyCard from './components/TechnologyCard.vue';
 
 const isOnScreen = ref(false);
 
@@ -116,7 +116,18 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="tecnologias" id-name="#technologies" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <div class="flex flex-wrap justify-center mt-28">
+        <TechnologyCard technology="HTML" icon-name="html5"></TechnologyCard>
+        <TechnologyCard technology="CSS" icon-name="css3"></TechnologyCard>
+        <TechnologyCard technology="JavaScript" icon-name="javascript"></TechnologyCard>
+        <TechnologyCard technology="TypeScript" icon-name="typescript"></TechnologyCard>
+        <TechnologyCard technology="Git" icon-name="git"></TechnologyCard>
+        <TechnologyCard technology="React" icon-name="react"></TechnologyCard>
+        <TechnologyCard technology="Vue.js" icon-name="vuejs"></TechnologyCard>
+        <TechnologyCard technology="TailwindCSS" icon-name="tailwind-css"></TechnologyCard>
+        <TechnologyCard technology="Sass" icon-name="sass"></TechnologyCard>
+        <TechnologyCard technology="Redux" icon-name="redux"></TechnologyCard>
+      </div>
     </SectionComponent>
 
     <SectionComponent title="contato" id-name="#contact-me" :is-on-screen="isOnScreen">

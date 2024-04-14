@@ -5,6 +5,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-poppins;
-  box-sizing: border-box;
+  @apply font-poppins box-border;
 }
