@@ -5,6 +5,7 @@ import TypewriterAnimation from './components/TypewriterAnimation.vue';
 import SectionComponent from './components/SectionComponent.vue';
 import ExperienceCard from './components/ExperienceCard.vue';
 import TechnologyCard from './components/TechnologyCard.vue';
+import ContactCard from './components/ContactCard.vue';
 
 const isOnScreen = ref(false);
 
@@ -131,7 +132,11 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="contato" id-name="#contact-me" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <div class="flex flex-wrap">
+        <ContactCard url="mailto:laisadnevescosta@gmail.com" icon-name="gmail" contact-name="Gmail"></ContactCard>
+        <ContactCard url="https://www.linkedin.com/in/laisa-costa-748a5a170" icon-name="linkedin-square" contact-name="LinkedIn"></ContactCard>
+        <ContactCard url="https://github.com/Azzyew" icon-name="github" contact-name="GitHub"></ContactCard>
+      </div>
     </SectionComponent>
 
   </main>
