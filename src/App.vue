@@ -6,6 +6,7 @@ import SectionComponent from './components/SectionComponent.vue';
 import ExperienceCard from './components/ExperienceCard.vue';
 import TechnologyCard from './components/TechnologyCard.vue';
 import ContactCard from './components/ContactCard.vue';
+import EducationCard from './components/EducationCard.vue';
 
 const isOnScreen = ref(false);
 
@@ -113,7 +114,13 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="educação" id-name="#education" :is-on-screen="isOnScreen">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <div class="py-48 min-h-dvh flex flex-col justify-between">
+        <EducationCard school="Estácio" course="Sistemas para Internet" period="05/22 - 10/24 (previsão)">
+        </EducationCard>
+
+        <EducationCard school="IFRS Campus Osório" course="Ensino médio com curso técnico de informática" period="02/18 - 12/21">
+        </EducationCard>
+      </div>
     </SectionComponent>
 
     <SectionComponent title="tecnologias" id-name="#technologies" :is-on-screen="isOnScreen">
