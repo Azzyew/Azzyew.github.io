@@ -73,7 +73,7 @@ onMounted(() => {
         <template v-slot:stack>
           <box-icon type="logo" name="react" color="#c2410c" size="lg"></box-icon>
           <box-icon type="logo" name="typescript" color="#c2410c" size="lg"></box-icon>
-          <box-icon type="logo" name="nodejs" color="#c2410c" size="lg"></box-icon>
+          <box-icon type="logo" name="redux" color="#c2410c" size="lg"></box-icon>
         </template>
       </ExperienceCard>
 

@@ -19,7 +19,7 @@ const props = defineProps({
   <section class="mt-12 p-16 flex flex-col items-center min-h-dvh w-full">
     <h2
       class="
-        text-2xl text-orange-600 font-light tracking-wider relative w-fit
+        text-2xl text-orange-600 font-light tracking-wider relative w-fit cursor-default
         after:bg-orange-600 after:absolute after:h-px after:w-full after:-bottom-1 after:left-0 after:scale-x-0 after:transition-transform after:duration-500  
       "
       :class="{ 'animate-fadeIn after:scale-x-100': props.isOnScreen }"
