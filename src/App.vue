@@ -45,10 +45,10 @@ onMounted(() => {
     </div>
 
     <SectionComponent title="quem sou eu" id-name="#about-me" :is-on-screen="isOnScreen">
-      <div class="mt-52 flex flex-col justify-around items-center lg:flex-row">
+      <div class="mt-52 flex flex-col justify-around items-center xl:flex-row">
         <!-- temporary img src for now -->
         <img class="h-96 w-96 rounded-lg" src="https://i.pinimg.com/736x/c3/97/50/c39750b943e50beb48358ef51fe3b3d4.jpg">
-        <p class="w-1/2 text-2xl font-extralight text-center">
+        <p class="mt-12 text-2xl font-extralight text-center xl:w-1/2 xl:mt-0">
           me chamo Laisa, tenho mais de 2.5 anos de experiência e sou apaixonada por desenvolvimento web, principalmente front-end! já trabalhei com diferentes frameworks para aplicações em produção, e tenho sempre muita vontade de aprender e facilidade para isso. levo sempre em consideração acessibilidade, performance e developer experience nos projetos em que participo, e claro user experience acima de tudo.
         </p>
 

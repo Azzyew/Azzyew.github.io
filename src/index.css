@@ -9,6 +9,19 @@ body {
 }
 
 ::selection {
-  background-color: #c2410c;
-  color: #fff;
+  @apply bg-orange-700 text-white;
 }
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+

@@ -16,7 +16,7 @@ const props = defineProps({
 
 </script>
 <template>
-  <section class="mt-12 p-16 flex flex-col items-center min-h-dvh w-full">
+  <section class="mt-12 p-16 flex flex-col items-center min-h-[900px] w-full">
     <h2
       class="
         text-2xl text-orange-600 font-light tracking-wider relative w-fit cursor-default
