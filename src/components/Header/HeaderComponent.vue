@@ -34,6 +34,7 @@ const navItems = [
       <ul v-for="item in navItems" :key="item.link">
         <HeaderItem :title="item.title" :link="item.link" />
       </ul>
+      
     </nav>
   </header>
 </template>
