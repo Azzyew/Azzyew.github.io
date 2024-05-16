@@ -18,7 +18,7 @@ const iconColor = computed(() => isHovered.value ? '#c2410c' : '#ffffff');
 
 <template>
   <div
-    class="w-72 px-8 py-2 rounded-md bg-orange-700 text-white space-x-3 flex justify-center items-center mt-24 mr-12 group bg-[linear-gradient(#fff_0_0)] bg-[length:0] bg-no-repeat duration-300 hover:bg-[length:100%]"
+    class="w-80 px-8 py-2 rounded-md bg-orange-700 text-white space-x-3 flex justify-center items-center mt-24 group bg-[linear-gradient(#fff_0_0)] bg-[length:0] bg-no-repeat duration-300 hover:bg-[length:100%] lg:mr-12"
     @mouseover="isHovered = true"
     @mouseleave="isHovered = false"
   >

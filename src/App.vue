@@ -7,6 +7,7 @@ import ExperienceCard from './components/ExperienceCard.vue';
 import TechnologyCard from './components/TechnologyCard.vue';
 import ContactCard from './components/ContactCard.vue';
 import EducationCard from './components/EducationCard.vue';
+import FooterComponent from './components/FooterComponent.vue';
 
 const isOnScreen = ref(false);
 
@@ -34,7 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="text-orange-50 bg-neutral-900 px-16">
+  <main class="text-orange-50 bg-neutral-900 px-4 lg:px-16">
     <div class="flex justify-center">
       <HeaderComponent />
     </div>
@@ -49,7 +50,7 @@ onMounted(() => {
         <img class="h-96 w-96 rounded-lg" src='./assets/tea.jpg'>
         
         <p class="mt-20 text-2xl font-extralight text-center xl:w-1/2 xl:mt-0">
-          me chamo Laisa, tenho mais de 2.5 anos de experiência e sou apaixonada por desenvolvimento web, principalmente front-end! já trabalhei com diferentes frameworks para aplicações em produção, e tenho sempre muita vontade de aprender e facilidade para isso. levo sempre em consideração acessibilidade, performance e developer experience nos projetos em que participo, e claro user experience acima de tudo.
+          me chamo Laisa, tenho mais de dois anos e meio de experiência e sou apaixonada por desenvolvimento web, principalmente front-end! já trabalhei com diferentes frameworks para aplicações em produção, e tenho sempre muita vontade de aprender e facilidade para isso. levo sempre em consideração acessibilidade, performance e developer experience nos projetos em que participo, e claro user experience acima de tudo.
         </p>
 
       </div>
@@ -72,10 +73,10 @@ onMounted(() => {
 
       <ExperienceCard company="RankMyAPP" job-title="Desenvolvedora Fullstack" period="02/22 - 01/23">
         <template v-slot:description>
-        Participei do desenvolvimento e manutenção de plataformas em produção, utilizando como
-        stack principal React e Typescript, além de tecnologias como Redux, Styled-components e
-        AntDesign no frontend. No backend utilizei tecnologias como Node.js, Typescript, NestJS,
-        RabbitMQ e bancos relacionais e não relacionais.
+          Participei do desenvolvimento e manutenção de plataformas em produção, utilizando como
+          stack principal React e Typescript, além de tecnologias como Redux, Styled-components e
+          AntDesign no frontend. No backend utilizei tecnologias como Node.js, Typescript, NestJS,
+          RabbitMQ e bancos relacionais e não relacionais.
         </template>
 
         <template v-slot:stack>
@@ -87,11 +88,11 @@ onMounted(() => {
 
       <ExperienceCard company="IFRS Campus Osório/CNPq" job-title="Bolsista fullstack" period="03/21 - 08/21">
         <template v-slot:description>
-        Bolsista CNPq no projeto Promovid@, que teve como objetivo desenvolver um sistema de
-        monitoramento de casos de Covid-19 para as Secretarias Municipais de Saúde. Sistema feito
-        utilizando a stack MERN (MongoDB, Express, React e Node.js). Participei em atualizações e
-        melhorias nas páginas e no desenvolvimento de novas funções, como a de exportar os dados
-        em .CSV, e atualização nos filtros utilizados na pesquisa.
+          Bolsista CNPq no projeto Promovid@, que teve como objetivo desenvolver um sistema de
+          monitoramento de casos de Covid-19 para as Secretarias Municipais de Saúde. Sistema feito
+          utilizando a stack MERN (MongoDB, Express, React e Node.js). Participei em atualizações e
+          melhorias nas páginas e no desenvolvimento de novas funções, como a de exportar os dados
+          em .CSV, e atualização nos filtros utilizados na pesquisa.
         </template>
 
         <template v-slot:stack>
@@ -103,13 +104,13 @@ onMounted(() => {
 
       <ExperienceCard company="IFRS Campus Osório" job-title="Bolsista fullstack" period="08/20 - 12/20">
         <template v-slot:description>
-        Bolsista de extensão na área de programação no projeto Incubadora de Redes e
-        Empreendimentos Solidários do Campus Osório. Programação com React.js, Node.js, Express,
-        ContextAPI e uso de metodologia ágil. Participei no desenvolvimento do aplicativo CoopFrete
-        para compartilhar fretes entre cooperativas, tanto no desenvolvimento de páginas, 
-        como na integração do sistema de redefinição de senha. Participei no desenvolvimento da página 
-        oficial do projeto Incubadora tanto na criação de telas quanto na criação dos CRUDs para 
-        administrar os conteúdos do site.
+          Bolsista de extensão na área de programação no projeto Incubadora de Redes e
+          Empreendimentos Solidários do Campus Osório. Programação com React.js, Node.js, Express,
+          ContextAPI e uso de metodologia ágil. Participei no desenvolvimento do aplicativo CoopFrete
+          para compartilhar fretes entre cooperativas, tanto no desenvolvimento de páginas, 
+          como na integração do sistema de redefinição de senha. Participei no desenvolvimento da página 
+          oficial do projeto Incubadora tanto na criação de telas quanto na criação dos CRUDs para 
+          administrar os conteúdos do site.
         </template>
 
         <template v-slot:stack>
@@ -131,7 +132,7 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="tecnologias" id-name="technologies" :is-on-screen="isOnScreen">
-      <div class="flex flex-wrap justify-center mt-28">
+      <div class="flex flex-col items-center justify-center mt-28 md:flex-row md:flex-wrap">
         <TechnologyCard technology="HTML" icon-name="html5"></TechnologyCard>
         <TechnologyCard technology="CSS" icon-name="css3"></TechnologyCard>
         <TechnologyCard technology="JavaScript" icon-name="javascript"></TechnologyCard>
@@ -146,7 +147,7 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="contato" id-name="contact-me" :is-on-screen="isOnScreen">
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap justify-center ">
         <ContactCard url="mailto:laisadnevescosta@gmail.com" icon-name="gmail" contact-name="Gmail"></ContactCard>
         <ContactCard url="https://www.linkedin.com/in/laisa-costa-748a5a170" icon-name="linkedin-square" contact-name="LinkedIn"></ContactCard>
         <ContactCard url="https://github.com/Azzyew" icon-name="github" contact-name="GitHub"></ContactCard>
@@ -154,4 +155,5 @@ onMounted(() => {
     </SectionComponent>
 
   </main>
+  <FooterComponent />
 </template>
