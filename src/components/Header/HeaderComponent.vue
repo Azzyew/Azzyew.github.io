@@ -28,10 +28,10 @@ const navItems = [
 
 <template>
   <header class="w-full h-9 mt-4">
-    <nav class="flex items-center justify-evenly">
+    <nav class="items-center justify-evenly lg:flex">
       <a class="mplus text-3xl text-orange-600" href="#">Laisa Costa</a>
 
-      <ul v-for="item in navItems" :key="item.link">
+      <ul class="hidden lg:flex" v-for="item in navItems" :key="item.link">
         <HeaderItem :title="item.title" :link="item.link" />
       </ul>
       
