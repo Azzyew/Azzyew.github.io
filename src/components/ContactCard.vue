@@ -23,7 +23,7 @@ const iconColor = computed(() => isHovered.value ? '#ffffff' : '#c2410c');
 
 <template>
   <a
-    class="text-lg cursor-pointer w-72 px-8 py-2 rounded-md border border-orange-700 text-orange-700 flex justify-evenly items-center mt-24 mr-12 group hover:border-white"
+    class="text-lg cursor-pointer w-72 px-8 py-2 rounded-md border border-orange-700 text-orange-700 flex justify-evenly items-center mt-24 group hover:border-white lg:mr-12"
     :href="props.url"
     target="_blank"
     @mouseover="isHovered = true"

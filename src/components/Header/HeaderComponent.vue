@@ -3,23 +3,23 @@ import HeaderItem from './HeaderItem.vue';
 
 const navItems = [
   {
-    title: "quem sou eu",
+    title: "Quem sou eu",
     link: "#about-me",
   },
   {
-    title: "experiência",
+    title: "Experiência",
     link: "#experience",
   },
   {
-    title: "educação",
+    title: "Educação",
     link: "#education",
   },
   {
-    title: "tecnologias",
+    title: "Tecnologias",
     link: "#technologies",
   },
   {
-    title: "contato",
+    title: "Contato",
     link: "#contact-me",
   },
 ];
