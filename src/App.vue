@@ -57,6 +57,15 @@ onMounted(() => {
     </SectionComponent>
 
     <SectionComponent title="Experiência" id-name="experience" :is-on-screen="isOnScreen">
+      <ExperienceCard company="VoltBras" job-title="Desenvolvedora Mobile" period="05/24 - atual">
+
+        <template v-slot:stack>
+          <box-icon type="logo" name="react" color="#c2410c" size="lg"></box-icon>
+          <box-icon type="logo" name="typescript" color="#c2410c" size="lg"></box-icon>
+          <box-icon type="logo" name="graphql" color="#c2410c" size="lg"></box-icon>
+        </template>
+      </ExperienceCard>
+
       <ExperienceCard company="BRIUS" job-title="Desenvolvedora Front-end" period="03/23 - 06/23">
         <template v-slot:description>
           Fui responsável pela migração da plataforma de Vue 2 para Vue 3. Participei do
